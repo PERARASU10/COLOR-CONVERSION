@@ -36,12 +36,18 @@ cv2.imshow('RGB2GRAY',grayImage1)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-
-
 ```
 # ii)Convert HSV to RGB and BGR
 ```
-
+import cv2
+houseHSVImage = cv2.imread('benten.jpeg')
+cv2.imshow('212222100033_PERARASU',houseHSVImage)
+RGBImage = cv2.cvtColor(houseHSVImage,cv2.COLOR_HSV2RGB)
+cv2.imshow('BGR2HSV',RGBImage)
+BGRImage=cv2.cvtColor(houseHSVImage,cv2.COLOR_HSV2BGR)
+cv2.imshow('RGB2HSV',BGRImage)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 
 ```
@@ -63,12 +69,14 @@ cv2.destroyAllWindows()
 ```
 ## Output:
 ### i) BGR and RGB to HSV and GRAY
+
 ![image](https://github.com/PERARASU10/COLOR-CONVERSION/assets/118348589/798f0c72-6b16-47af-9f24-c8b0444f6b3a)
 
 
 ### ii) HSV to RGB and BGR
-<br>
-<br>
+
+![image](https://github.com/PERARASU10/COLOR-CONVERSION/assets/118348589/1cce5f7a-3552-4812-860d-49f6f03eea8a)
+
 
 ### iii) RGB and BGR to YCrCb
 <br>
