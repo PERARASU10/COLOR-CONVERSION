@@ -53,17 +53,46 @@ cv2.destroyAllWindows()
 ```
 # iii)Convert RGB and BGR to YCrCb
 ```
-
+import cv2
+houseImage = cv2.imread('benten.jpg')
+cv2.imshow('212222100033_PERARASU',houseImage)
+YCrCb_image = cv2.cvtColor(houseImage, cv2.COLOR_RGB2YCrCb)
+cv2.imshow('BGR2HSV',YCrCb_image)
+YCrCb_image1 = cv2.cvtColor(houseImage, cv2.COLOR_BGR2YCrCb)
+cv2.imshow('RGB2HSV',YCrCb_image1)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 ```
 # iv)Split and Merge RGB Image
 ```
-
+import cv2
+image = cv2.imread('benten.jpg')
+blue = image[:,:,0]
+green = image[:,:,1]
+red = image[:,:,2]
+cv2.imshow('B-Channel',blue)
+cv2.imshow('G-Channel',green)
+cv2.imshow('R-Channel',red)
+mergeBgr = cv2.merge((blue,green,red))
+cv2.imshow('212222100033_PERARASU',mergeBgr)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 ```
 # v) Split and merge HSV Image
 ```
-
+import cv2
+image = cv2.imread('benten.jpg')
+hsv = cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
+h,s,v = cv2.split(hsv)
+cv2.imshow('Hue - Image',h)
+cv2.imshow('Saturation - Image',s)
+cv2.imshow('Gray - Image',v)
+mergedHSV = cv2.merge((h,s,v))
+cv2.imshow('212222100033_PERARASU',mergedHSV)
+cv2.waitKey(0)
+cv2.destroyAllWindow()
 
 
 ```
@@ -79,16 +108,17 @@ cv2.destroyAllWindows()
 
 
 ### iii) RGB and BGR to YCrCb
-<br>
-<br>
+
+![image](https://github.com/PERARASU10/COLOR-CONVERSION/assets/118348589/f1812e9b-1e18-4937-b84f-f5c84168b69d)
+
 
 ### iv) Split and merge RGB Image
-<br>
-<br>
+
+![image](https://github.com/PERARASU10/COLOR-CONVERSION/assets/118348589/822c3763-d452-4d82-ab86-fcedbfc04810)
 
 ### v) Split and merge HSV Image
-<br>
-<br>
+
+![image](https://github.com/PERARASU10/COLOR-CONVERSION/assets/118348589/ed7511f0-10cf-47bb-8e85-888e5f8109bc)
 
 
 ## Result:
